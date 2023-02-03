@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1 >
+        this is a demo page
+    </h1>
+   <div id="myDiv" style="border: 2px solid black; width: 200px; height: 200px;">
+    <button >
+        Click me
+    </button>
+   </div>
+    <script>
+        // let a = document.querySelector('Button');
+        // a.addEventListener('click',function(e){
+        //     document.getElementsByTagName("h1")[0].innerHTML="This is cypher schools "
+        // })
+        // let b = document.getElementById("bb")
+        document.querySelector('#myDiv').addEventListener("click",function (e){
+            console.log("div click")
+        });
+        document.querySelector("button").addEventListener('click',function (e){
+            e.stopPropagation()
+            console.log("btn click")
+        });
+        document.body.addEventListener('click',function (e){
+            console.log("body click")
+        });
+    </script>
+</body>
+</html>
